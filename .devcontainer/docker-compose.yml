@@ -1,0 +1,17 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/workspace/todo-app:cached
+      - ../../dev-team:/workspace/dev-team:cached
+      - node_modules:/workspace/todo-app/node_modules
+    command: sleep infinity
+    ports:
+      - "5173:5173"
+    environment:
+      - NODE_ENV=development
+
+volumes:
+  node_modules:
