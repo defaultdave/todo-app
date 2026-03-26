@@ -4,7 +4,7 @@ import AxeBuilder from '@axe-core/playwright'
 test.describe('Todo App', () => {
   test('loads the home page', async ({ page }) => {
     await page.goto('/')
-    await expect(page.getByRole('heading', { name: 'Todo App' })).toBeVisible()
+    await expect(page.getByRole('heading', { name: 'Todos' })).toBeVisible()
   })
 
   test('has no accessibility violations', async ({ page }) => {
